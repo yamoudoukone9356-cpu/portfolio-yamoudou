@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONE | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        
+<nav class="navbar">
+    <h2 class="logo">KONE<span>.</span></h2>
+
+    <button class="menu-toggle"
+            id="menuToggle"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+            aria-controls="menu">
+        ☰
+    </button>
+
+    <ul class="menu" id="menu">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+    </header>
+
+    <main>
+
+        <!-- Accueil -->
+        <section id="accueil" class="hero">
+            <div class="hero-content">
+                <p class="intro">BONJOUR, BIENVENUE SUR MON SITE</p>
+
+                <h1>Je suis <span>Yamoudou KONE</span></h1>
+
+                <h2>Étudiant en informatique</h2>
+
+                <p>
+                    Je découvre et développe mes compétences
+                    dans le monde du numérique, du développement
+                    web et des réseaux informatiques.
+                </p>
+
+                <a href="#apropos" class="btn">Découvrir mon profil</a>
+            </div>
+        </section>
+
+        <!-- À propos -->
+        <section id="apropos" class="section">
+            <h2>À propos de moi</h2>
+
+            <p>
+                Je suis étudiant en Génie informatique et
+                télécommunication. Je suis passionné par
+                les nouvelles technologies et la programmation.
+                Mon objectif est de devenir un professionnel
+                compétent dans le domaine informatique.
+            </p>
+        </section>
+
+        <!-- Compétences -->
+        <section id="competences" class="section">
+            <h2>Mes compétences</h2>
+
+            <div class="cards">
+                <article class="card">
+                    <h3>HTML</h3>
+                    <p>Création et structuration de pages web.</p>
+                </article>
+
+                <article class="card">
+                    <h3>CSS</h3>
+                    <p>Mise en forme et design des sites web.</p>
+                </article>
+
+                <article class="card">
+                    <h3>JavaScript</h3>
+                    <p>Création de fonctionnalités interactives.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Réseaux</h3>
+                    <p>Connaissances en réseaux informatiques.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Projets -->
+        
+
+<section id="projets">
+    <h2>Mes projets</h2>
+
+    <p class="projets-intro">
+        Découvrez quelques projets réalisés
+        dans le cadre de mon apprentissage.
+    </p>
+
+    <div class="projets-container">
+
+        <!-- Projet 1 -->
+        <div class="projet-card">
+            <h3>Mon portfolio</h3>
+            <p>
+                Un site personnel présentant mon parcours,
+                mes compétences et mes réalisations.
+            </p>
+            <span>HTML • CSS • JavaScript</span>
+
+            <div class="projet-boutons">
+                <a href="#" class="btn-projet">Voir le projet</a>
+                <a href="#" class="btn-code">Voir le code</a>
+            </div>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="projet-card">
+            <h3>Site web responsive</h3>
+            <p>
+                Un site adapté aux ordinateurs,
+                tablettes et téléphones.
+            </p>
+            <span>HTML • CSS</span>
+
+            <div class="projet-boutons">
+                <a href="#" class="btn-projet">Voir le projet</a>
+                <a href="#" class="btn-code">Voir le code</a>
+            </div>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="projet-card">
+            <h3>Formulaire interactif</h3>
+            <p>
+                Un formulaire avec vérification
+                des informations saisies.
+            </p>
+            <span>HTML • CSS • JavaScript</span>
+
+            <div class="projet-boutons">
+                <a href="#" class="btn-projet">Voir le projet</a>
+                <a href="#" class="btn-code">Voir le code</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+        
+<section id="contact" class="section">
+    <h2>Me contacter</h2>
+
+    <p>
+        Vous souhaitez échanger avec moi ?
+        Envoyez-moi un message.
+    </p>
+
+    <form id="contactForm" class="contact-form">
+
+        <input
+            type="text"
+            id="nom"
+            placeholder="Votre nom"
+            required
+        >
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Votre adresse e-mail"
+            required
+        >
+
+        <textarea
+            id="message"
+            placeholder="Votre message"
+            required
+        ></textarea>
+
+        <button type="submit" class="btn">
+            Envoyer le message
+        </button>
+
+        <p id="confirmation"></p>
+
+    </form>
+</section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 KONE Yamoudou. Tous droits réservés.</p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>

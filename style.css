@@ -1,0 +1,362 @@
+
+/* Réglages généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #080808;
+    color: white;
+    line-height: 1.7;
+}
+
+/* Navigation */
+header {
+    background-color: #111;
+    padding: 20px 8%;
+    border-bottom: 1px solid #252525;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+.logo span,
+.hero h1 span {
+    color: #00aaff;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #00aaff;
+}
+
+/* Accueil */
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.intro {
+    color: #00aaff;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+/* Boutons */
+.btn {
+    display: inline-block;
+    background-color: #00aaff;
+    color: black;
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: white;
+    transform: translateY(-3px);
+}
+
+/* Sections */
+.section {
+    padding: 70px 10%;
+}
+
+.section h2 {
+    color: #00aaff;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+/* Cartes */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #151515;
+    padding: 25px;
+    border: 1px solid #292929;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #00aaff;
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #00aaff;
+    margin-bottom: 12px;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #111;
+    color: #aaa;
+    border-top: 1px solid #252525;
+}
+
+/* Téléphones */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .section {
+        padding: 45px 6%;
+    }
+}
+
+/* Formulaire de contact */
+
+.contact-form {
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background: #151515;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 1px solid #00aaff;
+}
+
+.contact-form button {
+    border: none;
+    cursor: pointer;
+}
+
+#confirmation {
+    color: #00cc88;
+    font-weight: bold;
+}
+
+/* Bouton hamburger */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #00aaff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+}
+
+/* Animations des sections */
+.section-animation {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section-animation.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation des cartes */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 170, 255, 0.2);
+}
+
+/* SECTION MES PROJETS */
+
+.projets-intro {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.projets-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.projet-card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 25px;
+    transition: 0.3s ease;
+}
+
+.projet-card:hover {
+    transform: translateY(-8px);
+    border-color: #00aaff;
+    box-shadow: 0 8px 25px rgba(0, 170, 255, 0.2);
+}
+
+.projet-card h3 {
+    color: #00aaff;
+    margin-bottom: 15px;
+}
+
+.projet-card p {
+    color: white;
+    line-height: 1.6;
+}
+
+.projet-card span {
+    display: inline-block;
+    color: #00aaff;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    .projets-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* BOUTONS DES PROJETS */
+
+.projet-boutons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.projet-boutons a {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-projet {
+    background: #00aaff;
+    color: #080808;
+}
+
+.btn-code {
+    border: 1px solid #00aaff;
+    color: #00aaff;
+}
+
+.btn-projet:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.btn-code:hover {
+    background: #00aaff;
+    color: #080808;
+    transform: translateY(-3px);
+}
